@@ -1,0 +1,80 @@
+spring:
+    main:
+        banner-mode: "off"
+    datasource:
+        name: mysql-ds
+        url: jdbc:mysql://localhost:3306/spring?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&autoReconnect=true
+        driver-class-name: com.mysql.jdbc.Driver
+        username: spring
+        password: spring
+    data:
+        rest:
+            base-path: /api
+            default-page-size: 10
+            max-page-size: 100
+    hateoas:
+        use-hal-as-default-json-media-type: false
+    jackson:
+        serialization:
+            fail_on_empty_beans: false
+        date-format: yyyy-MM-dd HH:mm:ss
+    jpa:
+        open-in-view: true
+        show-sql: true
+        properties:
+             javax.persistence.sharedCache.mode: ENABLE_SELECTIVE
+             hibernate:
+                 hbm2ddl.auto: update
+                 dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+                 cache:
+                     use_second_level_cache: false
+                     use_query_cache: false
+                     region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+    jta:
+        transaction-manager-id: jta
+        atomikos:
+            datasource:
+                max-pool-size: 10
+                min-pool-size: 2
+                test-query: select 1
+            properties:
+                default-jta-timeout: 10000
+                enable-logging: false
+                force-shutdown-on-vm-exit: true
+
+    redis:
+        host: localhost
+        port: 6379
+        pool:
+            min-idle: 5
+            max-active: 10
+    session:
+        store-type: redis
+    cache:
+        cache-names: users
+        type: redis
+    rabbitmq:
+        host: localhost
+        port: 5672
+        cache:
+            channel:
+                size: 10
+    devtools:
+        restart:
+            enabled: false
+security:
+    enable-csrf: false
+    ignored: css, js, image
+    oauth2:
+        resource:
+            filter-order: 3
+
+server:
+    port: 8080
+    session:
+        timeout: 60
+        cookie:
+           max-age: 60
+
+logging:
+    file: oauth2-auth-samples.log
