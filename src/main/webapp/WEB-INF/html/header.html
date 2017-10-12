@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:sec="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+<div id="header">
+    <div class="header-order">
+        <div class="header-container">
+            <a class="to-login" href="javascript:void(0)" id="to-login" sec:authentication="name"></a>
+            <ul class="login-operation-list">
+                <li class="login-operation-item">
+                    <a class="login-operation-item-link" href="/admin/user/">个人中心</a>
+                </li>
+                <li class="login-operation-item">
+                    <form data-th-action="@{/logout}" id="logout" method="post"></form>
+                    <a class="login-operation-item-link" href="#" onclick="document.getElementById('logout').submit();">退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

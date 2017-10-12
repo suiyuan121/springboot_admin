@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form action="save" data-th-object="${course}" method="post">
+    <input type="hidden" data-th-field="*{id}"/><br>
+    授课老师:<input type="text" data-th-field="*{teacher}"/><br>
+    课程时间: <input type="text" data-th-field="*{courseDate}"/><br>
+    联系方式: <select name="contactWay">
+            <option value="weixin" data-th-selected="(${contactWay} == 'weixin')">微信</option>
+            <option value="qq" data-th-selected="(${contactWay} == 'qq')">QQ</option>
+            <option value="tel" data-th-selected="(${contactWay} == 'tel')">电话
+          </option>
+          </select>
+             <br>
+    状态 <input type="checkbox" name="state"  data-th-each="item : ${states}" data-th-text="${item.desc}"
+                   data-th-value="${item}" data-th-checked="(*{state} ==${item})"/><br>
+    授课标题: <input type="text" data-th-field="*{title}"/><br>
+    课程简介: <input type="text" data-th-field="*{intro}"/><br>
+    <input type="text" data-th-value="${contactNum}" name="contactNum"/><br>
+
+    <input type="submit" value="确定"/>
+    <input type="button" value="取消"/>
+</form>
+</body>
+
+</html>
+<script>
+
+</script>

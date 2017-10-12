@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div id="menu">
+    <section class="subnav">
+        <div class="logo">
+            <a class="logo-link" href="javascript:">
+                <img src="http://img.fuwo.com/merchant/myhome3d/1705/15/015d43f6391311e7b48800163e0018da.jpg" alt=""/>
+            </a>
+        </div>
+        <ul class="layui-nav layui-nav-tree" lay-filter="test">
+            <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+            <li class="layui-nav-item"><a href="">Banner管理</a></li>
+
+            <li class="layui-nav-item">
+                 <a href="@{/admin/case/list}"  data-th-href="@{/admin/case/list}">方案列表</a>
+            </li>
+
+            <li class="layui-nav-item"><a href="">品牌馆管理</a></li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">模型管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/admin/modelcomb/list" data-th-href="@{/admin/modelcomb/list}">模型搭配列表</a></dd>
+                    <dd><a href="/admin/modelpack/list" data-th-href="@{/admin/modelpack/list}">模型包列表</a></dd>
+                    <dd><a href="/admin/recmModel/list" data-th-href="@{/admin/modelRecom/list}">推荐模型列表</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">管理教程</a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="/admin/learning/video/list"
+                           data-th-href="@{/admin/learning/video/list}">视频管理</a>
+                    </dd>
+                    <dd><a href="/admin/learning/generalDocument/list"
+                           data-th-href="@{/admin/learning/generalDocument/list}">教程管理</a></dd>
+                    <dd><a href="/admin/learning/beginnerDocument/list"
+                           data-th-href="@{/admin/learning/beginnerDocument/list}">新手教程</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;">分类管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">模型分类</a></dd>
+                    <dd><a href="javascript:;">模型搭配分类</a></dd>
+                    <dd><a href="javascript:;">模型包分类</a></dd>
+                    <dd><a href="javascript:;">视频分类</a></dd>
+                    <dd><a href="javascript:;">教程分类</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="/admin/bulletin/list" data-th-href="@{/admin/bulletin/list}">公告管理</a>
+            </li>
+            <li class="layui-nav-item"><a href="">用户等级管理</a></li>
+            <li class="layui-nav-item"><a href="/admin/order/list" data-th-href="@{/admin/order/list}">订单管理</a></li>
+            <li class="layui-nav-item"><a href="/admin/user/" data-th-href="@{/admin/user/}">个人中心</a></li>
+        </ul>
+    </section>
+</div>
+</body>
+</html>
+

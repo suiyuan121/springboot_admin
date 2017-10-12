@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE"></title>
+    <link rel="shortcut icon" href="/static/images/icon/favicon32.ico"/>
+    <link rel="stylesheet" type="text/css" href="/static/js/modules/public/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/common/base.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/static/js/new/lib/html5shiv.min.js"></script>
+    <script src="/static/js/new/lib/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div id="header" data-th-include="~{header :: #header}"></div>
+<div id="menu" data-th-include="~{menu :: #menu}"></div>
+<div layout:fragment="content"></div>
+<!--
+<div id="footer" data-th-include="~{footer :: #footer}"></div>
+-->
+<div style="display: none;"><span data-th-text="${errorMessages}" id="errorMessages"></span></div>
+</body>
+<script type="text/javascript" src="/static/js/modules/public/jquery.js"></script>
+<script type="text/javascript" src="/static/js/modules/public/layui/lay/dest/layui.all.js"></script>
+<script src="/static/js/require.js"></script>
+<script src="/static/js/require.config.js"></script>
+
+<script>
+
+    //高亮显示菜单
+    var path = window.location.pathname;
+    var index = path.lastIndexOf("\/");
+    path = path.substring(0, index + 1);
+    var a = $('.layui-nav-child').find('a');
+    a.each(function () {
+        $this = $(this);
+        if ($this.attr('href').indexOf(path) != -1) {
+            $(this).parent().addClass("layui-this");
+        }
+    })
+
+</script>
+</html>
+
+
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="layout">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/personalcenter.css">
+</head>
+<body>
+<div layout:fragment="content">
+    <section class="container-wrap">
+        <div class="brand-model-list">
+            <span class="title">个人中心</span>
+        </div>
+        <form action="#" data-th-object="${userInfo}" id="form-personal-center" class="upload-img layui-form"
+              method="post">
+            <div class="add-text-list">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">账号</label>
+                    <div class="layui-input-block">
+                        <input type="text" lay-verify="title" autocomplete="off" placeholder=""
+                               class="layui-input account" maxlength="20" data-th-field="*{username}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">姓氏</label>
+                    <div class="layui-input-block">
+                        <input type="text" lay-verify="title" autocomplete="off" placeholder="请输入姓氏"
+                               class="layui-input title" maxlength="20" data-th-field="*{lastname}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">名字</label>
+                    <div class="layui-input-block">
+                        <input type="text" lay-verify="title" autocomplete="off" placeholder="请输入名字"
+                               class="layui-input title" maxlength="20" data-th-field="*{firstname}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">手机</label>
+                    <div class="layui-input-block">
+                        <input type="text" lay-verify="title" autocomplete="off"
+                               placeholder="请输入手机号"
+                               class="layui-input tel" maxlength="20" data-th-field="*{profile.mobile}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">原密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="oldPassword" placeholder="请输入原密码" autocomplete="off"
+                               class="layui-input oldPassword">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="newPassword" placeholder="请输入新密码" autocomplete="off"
+                               class="layui-input newPassword">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="confirmPassword" placeholder="请输入确认密码" autocomplete="off"
+                               class="layui-input confirmPassword">
+                    </div>
+                </div>
+            </div>
+            <button class="layui-btn save-btn" id="complete">完成</button>
+        </form>
+    </section>
+</div>
+</body>
+</html>
+<script src="/static/js/admin/personalcenter.js"></script>

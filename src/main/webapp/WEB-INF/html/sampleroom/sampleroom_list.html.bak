@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form action="/add" method="get"></form>
+<a href="sampleroom.html">添加样板间</a>
+<form action="/list" method="post">
+<table>
+    <tr>
+        <th>预览</th>
+        <th>所属品牌</th>
+        <th>样板间标题</th>
+        <th>样板间描述</th>
+        <th>上传时间</th>
+        <th>操作</th>
+    </tr>
+    <tr data-th-each="item:${sampleRooms.content}">
+        <td data-th-text="${item.prevUrl}"></td>
+        <td data-th-text="${item.brand}"></td>
+        <td data-th-text="${item.title}"></td>
+        <td data-th-text="${item.description}"></td>
+        <td data-th-text="${item.created}"></td>
+        <th><a href="#">置顶</a>
+            <a href="#" data-th-href="@{add(id=${item.id})}">编辑</a>
+            <a href="#" data-th-href="@{delete(id=${item.id})}">删除</a>
+        </th>
+    </tr>
+</table>
+</form>
+</body>
+</html>

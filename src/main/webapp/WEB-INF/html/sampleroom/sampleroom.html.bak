@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<form action="add"  method="post"   data-th-object="${sampleRoom}" enctype="multipart/form-data">
+    <input type="hidden" data-th-field="${sampleRoom.id}"></br>
+    上传样板间缩略图<input type="file"  name="url" data-th-value="${url}"/></br>
+    全景图链接<input type="text" name="panoUrl" data-th-field="${sampleRoom.panoUrl}"/></br>
+    样板间标题<input type="text" name="title" data-th-field="${sampleRoom.title}"></br>
+    样板间描述<input type="text" name="description" data-th-field="${sampleRoom.description}"></br>
+
+    <input type="submit" value="确定"/></br>
+    <input type="button" value="取消"/></br>
+</form>
+</body>
+</html>

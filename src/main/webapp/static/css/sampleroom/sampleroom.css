@@ -1,0 +1,186 @@
+/* line 2, ../sass/brandmanage.scss */
+body {
+    background: #edeef0;
+    height: 100%;
+}
+
+/* line 6, ../sass/brandmanage.scss */
+.container-wrap {
+    background-color: #fff;
+    margin-top: 60px;
+    margin-left: 210px;
+    width: 1710px;
+    height: 880px;
+    /*--------------------start add----------------------*/
+    /*--------------------end add----------------------*/
+    /*--------------------start list----------------------*/
+    /*--------------------start end----------------------*/
+}
+/* line 14, ../sass/brandmanage.scss */
+.container-wrap .upload-img {
+    position: relative;
+    padding: 60px 0 0 60px;
+}
+/* line 18, ../sass/brandmanage.scss */
+.container-wrap .upload-btn {
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+    border: 1px solid #e5e5e5;
+    background: #fff url("/static/images/banner_manage/icon_upload.png") no-repeat 83px 37px;
+}
+/* line 26, ../sass/brandmanage.scss */
+.container-wrap .upload-btn .upload-figure {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    z-index: 2;
+}
+/* line 38, ../sass/brandmanage.scss */
+.container-wrap .upload-btn .upload-text {
+    position: absolute;
+    top: 92px;
+    left: 30px;
+    color: #333;
+    font-size: 16px;
+}
+/* line 46, ../sass/brandmanage.scss */
+.container-wrap .uploaded-show {
+    position: absolute;
+    left: 310px;
+    top: 101px;
+    width: 268px;
+    margin: 0 auto;
+}
+/* line 52, ../sass/brandmanage.scss */
+.container-wrap .uploaded-show .img-link {
+    display: block;
+    width: 162px;
+    height: 114px;
+    border: 1px solid #E8E8E8;
+    margin-bottom: 50px;
+}
+/* line 58, ../sass/brandmanage.scss */
+.container-wrap .uploaded-show .img-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* line 65, ../sass/brandmanage.scss */
+.container-wrap .add-text-list {
+    margin: 40px 0 40px 0;
+}
+/* line 68, ../sass/brandmanage.scss */
+.container-wrap .add-text-list .layui-form-item .layui-form-label {
+    width: 110px;
+}
+/* line 72, ../sass/brandmanage.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block input, .container-wrap .add-text-list .layui-form-item .layui-input-block textarea {
+    width: 500px;
+}
+/* line 75, ../sass/brandmanage.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block textarea {
+    height: 250px;
+}
+/* line 82, ../sass/brandmanage.scss */
+.container-wrap .save-btn {
+    background-color: #33B371;
+    margin-left: 30px;
+}
+/* line 86, ../sass/brandmanage.scss */
+.container-wrap .layui-btn {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+}
+/* line 95, ../sass/brandmanage.scss */
+.container-wrap .brand-model-list {
+    height: 50px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+/* line 99, ../sass/brandmanage.scss */
+.container-wrap .brand-model-list .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    line-height: 50px;
+}
+/* line 105, ../sass/brandmanage.scss */
+.container-wrap .brand-model-list .layui-btn {
+    line-height: 32px;
+    height: 32px;
+    width: 100px;
+    position: absolute;
+    top: 69px;
+    right: 130px;
+    background-color: #33B371;
+}
+/* line 115, ../sass/brandmanage.scss */
+.container-wrap .layui-table {
+    margin-left: 20px;
+    width: auto;
+}
+/* line 119, ../sass/brandmanage.scss */
+.container-wrap .layui-table thead th {
+    height: 40px;
+    background-color: #F5F5F5;
+    color: #666;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+}
+/* line 130, ../sass/brandmanage.scss */
+.container-wrap .layui-table tbody td {
+    height: 140px;
+    text-align: center;
+    color: #999;
+}
+/* line 134, ../sass/brandmanage.scss */
+.container-wrap .layui-table tbody td.complete {
+    color: #33B371;
+}
+/* line 137, ../sass/brandmanage.scss */
+.container-wrap .layui-table tbody td img {
+    width: 100px;
+    height: 100px;
+}
+/* line 141, ../sass/brandmanage.scss */
+.container-wrap .layui-table tbody td .btn-group-justified {
+    margin: 0 auto;
+    width: auto;
+}
+/* line 145, ../sass/brandmanage.scss */
+.container-wrap .layui-table tbody td .btnwrap {
+    width: auto;
+}
+/* line 147, ../sass/brandmanage.scss */
+.container-wrap .layui-table tbody td .btnwrap > .btn {
+    display: block;
+    margin: 8px auto;
+    border-radius: 2px;
+    width: 100px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    padding: 0;
+    background: #fff;
+    color: #33B371;
+    border: 1px solid #33B371;
+}
+/* line 159, ../sass/brandmanage.scss */
+.container-wrap .layui-table tbody td .btnwrap > .btn:hover {
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+    background-color: #33B371;
+}

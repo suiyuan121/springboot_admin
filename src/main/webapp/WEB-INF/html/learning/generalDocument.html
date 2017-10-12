@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- 表示当前页面嵌入 layout页面作为一部分-->
+<html lang="zh-CN" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="/layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>2015年室内装修效果图大全，房屋家居装修样板房设计案例图片</title>
+    <meta name="keywords" content="装修效果图, 室内设计效果图,家居装修效果图, 房屋设计平面图, 室内装潢设计效果图, 装修案例图片"/>
+    <meta name="description" content="装修家居设计专属灵感图库大全，提供最新最全的室内装修效果图，包括客厅、厨房、榻榻米床、卫生间、卧室、客厅吊顶、阳台、餐厅、鞋柜、电视墙等各类装修效果图。"/>
+    <meta name="mobile-agent" content="format=html5;url=http://m.fuwo.com/xiaoguotu/p10257034.html"><!--适配手机页面-->
+    <link rel="canonical" href="base.html"><!--让搜索引擎搜索指定页面-->
+
+    <link rel="stylesheet" type="text/css" href="/static/css/learning/document.css">
+    <script>
+        window.UEDITOR_HOME_URL = '/static/js/lib/';
+    </script>
+</head>
+<body>
+<!--content是在layout页面配置的div-->
+<div layout:fragment="content">
+    <!--具体的业务页面-->
+    <section class="container-wrap">
+        <div class="brand-model-list">
+            <span class="title">文档添加</span>
+        </div>
+        <form id="form-document-add" class="upload-img layui-form" data-th-object="${document}" method="post"
+              action="save">
+            <input type="hidden" data-th-field="*{id}"/><br>
+            <div class="add-text-list">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题:</label>
+                    <div class="layui-input-block">
+                        <input type="text" data-th-field="*{title}" lay-verify="title" autocomplete="off"
+                               placeholder="请输入标题，20个字以内" class="layui-input titled" maxlength="20">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">发帖人:</label>
+                    <div class="layui-input-block">
+                        <input type="text" data-th-field="*{poster}" lay-verify="title" autocomplete="off"
+                               placeholder="请输入名字" class="layui-input person-posted" maxlength="20">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">板块:</label>
+                    <ul class="block-list" id="block-list">
+                        <input type="hidden" data-th-field="*{subject}" id="block-type">
+                        <li data-th-class="${item}==*{subject}?'block-item active':'block-item'"
+                            data-th-each="item : ${subjects}">
+                            <a class="block-item-link" href="javascript:;" data-th-text="${item.desc}"
+                               data-th-data-value="${item}">创建户型</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">浏览量:</label>
+                    <div class="layui-input-block">
+                        <input type="text" data-th-field="*{viewsInitial}" lay-verify="title" autocomplete="off"
+                               placeholder="请输入浏览量"
+                               class="layui-input pageview" maxlength="20">
+                        <span class="danwei">次</span>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label status">设置状态:</label>
+                    <div class="layui-input-block">
+                        <input type="radio" data-th-each="item : ${states}" data-th-title="${item.desc}" name="state"
+                               data-th-value="${item}" data-th-checked="(*{state} ==${item})">
+                    </div>
+                </div>
+                <div class="comment-add-wrap layui-form-item">
+                    <a name="contentPosition"></a>
+                    <label class="layui-form-label">内容:</label>
+                    <textarea class="comment-content-textarea" id="comment_content" name="cont"
+                              data-th-data-value="${@environment.getProperty('oss.domain')}+*{cont}"></textarea>
+                    <div id="container"></div>
+                    <div class="comment-check-login J-Check-Login"></div>
+                    <div class="comment-add-op">
+                        <input type="hidden" id="attachment">
+                    </div>
+                </div>
+            </div>
+            <button class="layui-btn save-btn">添加</button>
+            <button class="layui-btn layui-btn-primary">取消</button>
+        </form>
+
+    </section>
+</div>
+
+</body>
+</html>
+<script src="/static/js/admin/learning/document.js"></script>
+

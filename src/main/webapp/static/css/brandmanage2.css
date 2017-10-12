@@ -1,0 +1,150 @@
+/* line 2, ../sass/brandmanage2.scss */
+body {
+  background: #edeef0;
+  height: 100%;
+}
+
+/* line 6, ../sass/brandmanage2.scss */
+.container-wrap {
+  background-color: #fff;
+  margin-top: 60px;
+  margin-left: 210px;
+  width: 1710px;
+  height: 880px;
+  /**/
+  /*.brand-model-table{
+    margin-left:20px;
+    thead{
+      background:#fbfbfb;
+      tr {
+        border: 1px solid #dbdbdb;
+        th{
+          text-align: center;
+          font-size:14px;
+          font-weight: normal;
+          padding-left:20px;
+          color:#333;
+          height:45px;
+          border: 1px solid #dbdbdb;
+        }
+      }
+    }
+    tbody{
+      tr{
+        border: 1px solid #dbdbdb;
+        td{
+          text-align: center;
+          font-size:14px;
+          color:#666;
+          padding-left:20px;
+          height:120px;
+          border: 1px solid #dbdbdb;
+          a{
+            color:  #33b371;
+            margin-right:10px;
+          }
+        }
+      }
+    }
+  }*/
+}
+/* line 14, ../sass/brandmanage2.scss */
+.container-wrap .upload-img {
+  position: relative;
+  padding: 60px 0 0 60px;
+}
+/* line 18, ../sass/brandmanage2.scss */
+.container-wrap .upload-btn {
+  position: relative;
+  margin-top: 20px;
+  width: 200px;
+  height: 150px;
+  border-radius: 20px;
+  border: 1px solid #e5e5e5;
+  background: #fff url("/static/images/banner_manage/icon_upload.png") no-repeat 83px 37px;
+}
+/* line 26, ../sass/brandmanage2.scss */
+.container-wrap .upload-btn .upload-banner {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+  z-index: 2;
+}
+/* line 38, ../sass/brandmanage2.scss */
+.container-wrap .upload-btn .upload-text {
+  position: absolute;
+  top: 92px;
+  left: 30px;
+  color: #333;
+  font-size: 16px;
+}
+/* line 46, ../sass/brandmanage2.scss */
+.container-wrap .uploaded-show {
+  position: absolute;
+  left: 310px;
+  top: 101px;
+  width: 268px;
+  margin: 0 auto;
+}
+/* line 52, ../sass/brandmanage2.scss */
+.container-wrap .uploaded-show .img-link {
+  display: block;
+  width: 162px;
+  height: 114px;
+  border: 1px solid #E8E8E8;
+  margin-bottom: 50px;
+}
+/* line 58, ../sass/brandmanage2.scss */
+.container-wrap .uploaded-show .img-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* line 65, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list {
+  margin-top: 40px;
+}
+/* line 68, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list .layui-form-item .layui-form-label {
+  width: 110px;
+}
+/* line 72, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block input, .container-wrap .add-text-list .layui-form-item .layui-input-block textarea {
+  width: 500px;
+}
+/* line 75, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block textarea {
+  height: 350px;
+}
+/* line 81, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list dl {
+  overflow: hidden;
+}
+/* line 83, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list dl dt {
+  float: left;
+  padding-top: 16px;
+}
+/* line 87, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list dl dd {
+  float: left;
+}
+/* line 89, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list dl dd input {
+  margin-top: 10px;
+  width: 393px;
+  height: 30px;
+  border: 1px solid #E8E8E8;
+  padding: 8px 4px;
+}
+/* line 96, ../sass/brandmanage2.scss */
+.container-wrap .add-text-list dl dd textarea {
+  width: 400px;
+  height: 300px;
+}

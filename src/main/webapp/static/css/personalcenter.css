@@ -1,0 +1,224 @@
+/* line 2, ../sass/personalcenter.scss */
+body {
+  background: #edeef0;
+  height: 100%;
+}
+
+/* line 6, ../sass/personalcenter.scss */
+.container-wrap {
+  background-color: #fff;
+  margin-top: 60px;
+  margin-left: 210px;
+  height: 100%;
+  padding-bottom: 80px;
+  min-height: 878px;
+  /*--------------------start add----------------------*/
+  /*--------------------end add----------------------*/
+  /*--------------------start list----------------------*/
+  /*--------------------start end----------------------*/
+}
+/* line 13, ../sass/personalcenter.scss */
+.container-wrap.edit-wrap {
+  height: 100%;
+  padding-bottom: 80px;
+}
+/* line 17, ../sass/personalcenter.scss */
+.container-wrap.list-wrap {
+  height: 100%;
+  padding-bottom: 80px;
+}
+/* line 24, ../sass/personalcenter.scss */
+.container-wrap .upload-img {
+  padding: 60px 0 0 60px;
+}
+/* line 28, ../sass/personalcenter.scss */
+.container-wrap .add-text-list {
+  margin: 40px 0 40px 0;
+}
+/* line 30, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item {
+  position: relative;
+  margin: 30px 0;
+}
+/* line 33, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item label.error {
+  margin-left: 109px;
+  font-size: 14px;
+}
+/* line 37, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item.layui-inline {
+  margin: 0;
+}
+/* line 39, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item.layui-inline .layui-input-inline {
+  width: 400px;
+}
+/* line 44, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-form-label {
+  font-size: 16px;
+  width: 110px;
+  float: left;
+  text-align: left;
+}
+/* line 49, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-form-label.status {
+  margin-right: 16px;
+}
+/* line 52, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-form-label i {
+  color: #ee796c;
+  line-height: 16px;
+  font-size: 14px;
+  font-weight: 800;
+}
+/* line 59, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .block-list {
+  overflow: hidden;
+}
+/* line 61, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .block-list .block-item {
+  float: left;
+  border: 1px solid #e5e5e5;
+  margin-right: 15px;
+}
+/* line 65, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .block-list .block-item:hover {
+  background-color: #33B371;
+}
+/* line 67, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .block-list .block-item:hover .block-item-link {
+  color: #fff;
+}
+/* line 71, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .block-list .block-item .block-item-link {
+  float: left;
+  padding: 0 8px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #666;
+}
+/* line 82, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block input, .container-wrap .add-text-list .layui-form-item .layui-input-block textarea {
+  width: 400px;
+}
+/* line 84, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block input.design-number, .container-wrap .add-text-list .layui-form-item .layui-input-block textarea.design-number {
+  color: red;
+}
+/* line 88, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block .layui-layedit {
+  width: 86%;
+  height: 400px;
+}
+/* line 91, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block .layui-layedit body {
+  /*font-size: 14px;
+  line-height: 20px;*/
+}
+/* line 97, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block .danwei {
+  position: absolute;
+  top: 5px;
+  left: 430px;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 20px;
+}
+/* line 105, ../sass/personalcenter.scss */
+.container-wrap .add-text-list .layui-form-item .layui-input-block .add-btn {
+  position: absolute;
+  top: 0;
+  left: 458px;
+  width: 80px;
+  background: #33B371;
+}
+/* line 116, ../sass/personalcenter.scss */
+.container-wrap .layui-btn {
+  margin-left: 108px;
+  width: 95px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 5px;
+}
+/* line 122, ../sass/personalcenter.scss */
+.container-wrap .layui-btn.save-btn {
+  background-color: #33B371;
+}
+/* line 125, ../sass/personalcenter.scss */
+.container-wrap .layui-btn.layui-btn-primary {
+  margin-left: 75px;
+}
+/* line 133, ../sass/personalcenter.scss */
+.container-wrap .brand-model-list {
+  height: 50px;
+  padding-left: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 138, ../sass/personalcenter.scss */
+.container-wrap .brand-model-list .title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  line-height: 50px;
+}
+/* line 144, ../sass/personalcenter.scss */
+.container-wrap .brand-model-list .layui-btn {
+  line-height: 32px;
+  height: 32px;
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  right: 130px;
+  margin-right: 15px;
+}
+/* line 153, ../sass/personalcenter.scss */
+.container-wrap .brand-model-list .save-btn {
+  background-color: #33B371;
+  right: 260px;
+}
+/* line 158, ../sass/personalcenter.scss */
+.container-wrap .layui-table {
+  margin-left: 20px;
+  width: auto;
+}
+/* line 161, ../sass/personalcenter.scss */
+.container-wrap .layui-table.list-table {
+  margin: 30px 0 0 30px;
+}
+
+/*--------------------start edit----------------------*/
+/* line 170, ../sass/personalcenter.scss */
+.classify {
+  margin: 20px 0 0 0;
+}
+/* line 172, ../sass/personalcenter.scss */
+.classify .layui-input-block {
+  margin: 5px 0;
+}
+
+/*--------------------end edit----------------------*/
+/* line 179, ../sass/personalcenter.scss */
+body {
+  background: #edeef0;
+  height: 100%;
+}
+
+/* line 183, ../sass/personalcenter.scss */
+.container-wrap {
+  background-color: #fff;
+  margin-top: 60px;
+  margin-left: 210px;
+  height: 100%;
+  padding-bottom: 80px;
+}
+/* line 190, ../sass/personalcenter.scss */
+.container-wrap.edit-wrap {
+  height: 100%;
+  padding-bottom: 80px;
+}
+/* line 194, ../sass/personalcenter.scss */
+.container-wrap.list-wrap {
+  height: 100%;
+  padding-bottom: 80px;
+}

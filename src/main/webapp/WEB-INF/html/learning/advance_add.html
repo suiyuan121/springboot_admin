@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>添加公告</title>
+    <meta name="keywords" content="装修效果图, 室内设计效果图,家居装修效果图, 房屋设计平面图, 室内装潢设计效果图, 装修案例图片" />
+    <meta name="description" content="装修家居设计专属灵感图库大全，提供最新最全的室内装修效果图，包括客厅、厨房、榻榻米床、卫生间、卧室、客厅吊顶、阳台、餐厅、鞋柜、电视墙等各类装修效果图。
+" />
+    <meta name="mobile-agent" content="format=html5;url=http://m.fuwo.com/xiaoguotu/p10257034.html"><!--适配手机页面-->
+    <link rel="canonical" href="base.html"><!--让搜索引擎搜索指定页面-->
+    <link rel="shortcut icon" href="/static/images/icon/favicon32.ico"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/common/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/js/modules/public/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/tutorialmanage/advance.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/static/js/new/lib/html5shiv.min.js"></script>
+    <script src="/static/js/new/lib/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- header start -->
+<header id="" class="header-order">
+    <div class="header-container">
+        <a class="to-login" href="javascript:void(0)" id="to-login">张三</a>
+        <ul class="login-operation-list">
+            <li class="login-operation-item">
+                <a class="login-operation-item-link" href="javascript:;">个人中心</a>
+            </li>
+            <li class="login-operation-item">
+                <a class="login-operation-item-link" href="javascript:;">退出</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<!-- header end -->
+
+<!-- section start -->
+<section class="subnav">
+    <div class="logo">
+        <a class="logo-link" href="javascript:">
+            <img src="/static/images/common/logo.png" alt=""/>
+        </a>
+    </div>
+    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+        <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+        <li class="layui-nav-item"><a href="">Banner管理</a></li>
+        <li class="layui-nav-item"><a href="">品牌馆管理</a></li>
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;">模型管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:">模型搭配列表</a></dd>
+                <dd><a href="javascript:;">模型包列表</a></dd>
+                <dd><a href="javascript:;">推荐模型列表</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;">管理教程</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">视频管理</a></dd>
+                <!--  <dd class="layui-this"><a href="">后台模版</a></dd>-->
+                <dd><a href="javascript:;">教程管理</a></dd>
+                <dd><a href="javascript:;">课程预告</a></dd>
+                <dd><a href="javascript:;">新手教程</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;">分类管理</a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">模型分类</a></dd>
+                <dd><a href="javascript:;">模型搭配分类</a></dd>
+                <dd><a href="javascript:;">模型包分类</a></dd>
+                <dd><a href="javascript:;">视频分类</a></dd>
+                <dd><a href="javascript:;">教程分类</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">公告管理</a></li>
+        <li class="layui-nav-item"><a href="">用户等级管理</a></li>
+        <li class="layui-nav-item"><a href="">订单管理</a></li>
+        <li class="layui-nav-item"><a href="">个人中心</a></li>
+    </ul>
+</section>
+<section class="container-wrap add-wrap">
+    <div class="brand-model-list">
+        <span class="title">添加公告</span>
+    </div>
+    <form id="form-advance-add" class="upload-img layui-form">
+        <div class="add-text-list">
+            <div class="layui-form-item">
+                <label class="layui-form-label"><i>*</i>授课老师</label>
+                <div class="layui-input-block">
+                    <input type="text" name="teacher" lay-verify="title" autocomplete="off" placeholder="请输入授课老师" class="layui-input teacher" maxlength="20">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><i>*</i>授课时间</label>
+                <div class="layui-input-block">
+                    <input type="text" name="time" lay-verify="title" autocomplete="off" placeholder="请输入授课时间" class="layui-input time" maxlength="20">
+                </div>
+            </div>
+            <div class="layui-form-item contact-item">
+                <form class="layui-inline layui-form">
+                    <label class="layui-form-label"><i>*</i>联系方式</label>
+                    <div class="layui-input-inline">
+                        <select name="modules" lay-verify="required" lay-search="">
+                            <option value="1">电话</option>
+                            <option value="2">微信</option>
+                            <option value="3">QQ</option>
+                        </select>
+                    </div>
+                </form>
+                <div class="layui-input-block">
+                    <input type="text" name="contactWay" lay-verify="title" autocomplete="off" placeholder="请输入联系方式" class="layui-input" maxlength="20">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label status"><i>*</i>设置状态</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="default" value="公开" title="公开" checked="">
+                    <input type="radio" name="default" value="公开" title="不公开">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label"><i>*</i>课程标题</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入课程标题" class="layui-input title" maxlength="20">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label"><i>*</i>课程简介</label>
+                <div class="layui-input-block">
+                    <textarea class="layui-textarea layui-hide" name="content" lay-verify="content" id="LAY_demo_editor"></textarea>
+                </div>
+            </div>
+        </div>
+        <button class="layui-btn save-btn">添加</button>
+        <button class="layui-btn layui-btn-primary">取消</button>
+    </form>
+
+</section>
+<!-- section end -->
+
+<!-- footer start -->
+<footer class="footer">
+
+
+</footer>
+<!-- footer end -->
+
+
+</body>
+<script type="text/javascript" src="/static/js/modules/public/jquery.js"></script>
+<script type="text/javascript" src="/static/js/modules/public/layui/lay/dest/layui.all.js"></script>
+<script type="text/javascript">
+    var element = layui.element();
+    var form = layui.form();
+    var layedit = layui.layedit;
+    //创建一个编辑器
+    var editIndex = layedit.build('LAY_demo_editor');
+</script>
+<script src="/static/js/require.js"></script>
+<script src="/static/js/require.config.js"></script>
+<script src="/static/js/admin/tutorialmanage/advance.js"></script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="/layout">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>2015年室内装修效果图大全，房屋家居装修样板房设计案例图片</title>
+    <meta name="keywords" content="装修效果图, 室内设计效果图,家居装修效果图, 房屋设计平面图, 室内装潢设计效果图, 装修案例图片"/>
+    <meta name="description" content="装修家居设计专属灵感图库大全，提供最新最全的室内装修效果图，包括客厅、厨房、榻榻米床、卫生间、卧室、客厅吊顶、阳台、餐厅、鞋柜、电视墙等各类装修效果图。"/>
+    <meta name="mobile-agent" content="format=html5;url=http://m.fuwo.com/xiaoguotu/p10257034.html"><!--适配手机页面-->
+    <link rel="canonical" href="base.html"><!--让搜索引擎搜索指定页面-->
+    <link rel="shortcut icon" href="/static/images/icon/favicon32.ico"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/learning/document.css">
+</head>
+<body>
+
+<div layout:fragment="content">
+
+    <!--具体的业务页面-->
+    <section class="container-wrap list-wrap">
+        <div class="brand-model-list">
+            <span class="title">文档列表</span>
+            <a href="save" class="layui-btn">添加文档</a>
+            <div class="layui-input-inline search">
+                <input type="text" name="searchText" lay-verify="required" placeholder="请输入" autocomplete="off"
+                       class="layui-input" id="searchText">
+                <span class="search-btn"></span>
+            </div>
+        </div>
+        <table class="layui-table list-table">
+            <colgroup>
+                <col width="100">
+                <col width="500">
+                <col width="120">
+                <col width="200">
+                <col width="200">
+                <col width="150">
+                <col width="200">
+                <col width="150">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>优先级</th>
+                <th>标题</th>
+                <th>发帖人</th>
+                <th>
+                    <form class="layui-inline layui-form" id="form-subject">
+                        <label class="layui-form-label">分类</label>
+                        <div class="layui-input-inline">
+                            <select name="modules" lay-verify="required" lay-search="" id="subject"
+                                    lay-filter="subject">
+                                <option value="all">不限</option>
+                                <option data-th-each="item : ${subjects}"
+                                        data-th-value="${item}" data-th-text="${item.desc}"></option>
+                            </select>
+                        </div>
+                    </form>
+                </th>
+                <th>
+                    <form class="layui-inline layui-form" id="form-state">
+                        <label class="layui-form-label">状态</label>
+                        <div class="layui-input-inline">
+                            <select name="modules" lay-verify="required" lay-search="" id="state" lay-filter="state">
+                                <option value="all">全部</option>
+                                <option data-th-each="item : ${states}"
+                                        data-th-value="${item}" data-th-text="${item.desc}"></option>
+                            </select>
+                        </div>
+                    </form>
+                </th>
+                <th>浏览量</th>
+                <th>发布时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-th-each="item : ${page.content}" data-th-data-id="${item.id}">
+                <td data-th-text="${item.priority}">1</td>
+                <td data-th-text="${item.title}">url</td>
+                <td data-th-text="${item.poster}">url</td>
+                <td data-th-text="${item.subject==null?'':item.subject.desc}">url</td>
+                <td data-th-text="${item.state==null?'':item.state.desc}">url</td>
+                <td data-th-text="${'('+item.viewsInitial+'+'+(item.viewsIncrease-item.viewsInitial)+')次'}">1</td>
+                <td data-th-text="${item.created}">url</td>
+                <td>
+                    <div class="btnwrap">
+                        <button type="button" class="btn set-priority">设置优先级</button>
+                        <a class="btn edit" data-th-href="@{save(id=${item.id})}">编辑</a>
+                        <button type="button" class="btn delete">删除</button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!--分页开始-->
+        <div class="order-pagination">
+            <input type='hidden' id='totalPages' data-th-value='${page.totalPages}'/>
+            <input type='hidden' id='totalElements' data-th-value='${page.totalElements}'/>
+            <div id='changepage'></div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
+<script src="/static/js/admin/learning/document_list.js"></script>
+<script src="/static/js/layuipagination.js"></script>

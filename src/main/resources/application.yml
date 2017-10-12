@@ -1,0 +1,130 @@
+spring:
+    main:
+        banner-mode: "off"
+    application:
+        name: admin
+        index: 1
+    datasource:
+        name: mysql-ds
+        url: jdbc:mysql://localhost:3306/fuwo?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&autoReconnect=true
+        driver-class-name: com.mysql.jdbc.Driver
+        username: user
+        password: AzMNTOk%
+    data:
+        rest:
+            base-path: /api
+            default-page-size: 10
+            max-page-size: 100
+    hateoas:
+        use-hal-as-default-json-media-type: false
+    jackson:
+        serialization:
+            fail_on_empty_beans: false
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: Asia/Shanghai
+    jpa:
+        open-in-view: true
+        show-sql: true
+        properties:
+            javax.persistence.sharedCache.mode: ENABLE_SELECTIVE
+            hibernate:
+                hbm2ddl.auto: update
+                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+                cache:
+                    use_second_level_cache: false
+                    use_query_cache: false
+                    region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+    jta:
+        transaction-manager-id: jta
+        atomikos:
+            datasource:
+                max-pool-size: 128
+                min-pool-size: 16
+                test-query: select 1
+            properties:
+                default-jta-timeout: 10000
+                enable-logging: true
+                force-shutdown-on-vm-exit: true
+                log-base-dir: tx
+                log-base-name: tx
+    redis:
+        host: localhost
+        port: 6379
+        database: 3
+        password: DhG7n&5q
+        pool:
+            max-active: 512
+            min-idle: 128
+    session:
+        store-type: redis
+    cache:
+        cache-names: users
+        type: redis
+    rabbitmq:
+        host: localhost
+        port: 5672
+        cache:
+            channel:
+                size: 10
+    mvc:
+        favicon:
+            enabled: false
+        date-format: yyyy-MM-dd HH:mm:ss
+
+    thymeleaf:
+        prefix: /WEB-INF/html/
+        mode: HTML5
+        cache: false
+        suffix: .html
+    devtools:
+        restart:
+            enabled: false
+    pid:
+        file: admin.pid
+
+security:
+    enable-csrf: false
+    ignored: /static, /favicon.ico
+    oauth2:
+        client:
+            client-id: client1
+            client-secret: client1
+            userAuthorizationUri: http://account.fuwo.com/oauth/authorize
+            accessTokenUri: http://account.fuwo.com/oauth/token
+        resource:
+            token-info-uri: http://account.fuwo.com/oauth/check_token
+            filter-order: 3
+        sso:
+            login-path: /login
+
+server:
+    address: 0.0.0.0
+    port: 8000
+    context-path: /
+    display-name: admin
+    tomcat:
+        accesslog:
+            enabled: true
+            prefix: admin_access.log
+        max-connections: 1024
+        max-threads: 128
+    session:
+       timeout: 60
+       cookie:
+           max-age: 60
+    error:
+        whitelabel:
+            enabled: true
+
+logging:
+    file: admin.log
+    level:
+        root: INFO
+
+oss:
+    bucket-endpoint: oss-cn-hangzhou.aliyuncs.com
+    domain : http://img-test.fuwo.com/
+    image:
+        bucket-name: fuwo-img-test
+        bucket-access-key: LTAIMjOLvintFZbx
+        bucket-access-secret: fd8W6xFkFqnbMCk114qL94vd2V0Q1j

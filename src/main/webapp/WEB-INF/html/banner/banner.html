@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<p>展示列表</p>
+<table data-th-name="add">
+    <thead>
+    <tr>
+        <th>描述</th>
+        <th>链接</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="banner: ${banners}">
+        <td th:text="${banner.description}"></td>
+        <td th:text="${banner.link}"></td>
+        <td th:text="${banner.typeDesc}"></td>
+    </tr>
+    </tbody>
+</table>
+</br>
+<p>删除Banner</p>
+<form th:action="delete" method="post">
+    删除位置：<input type="number" data-th-name="deletePosition"/></br>
+    <input type="submit" value="删除" />
+</form>
+</br>
+<p>重置Banner顺序</p>
+<form th:action="reset" method="post">
+    要移动的位置：<input type="number" data-th-name="fromPosition"/></br>
+    移动到的位置：<input type="number" data-th-name="toPosition"/></br>
+    <input type="submit" value="移动" />
+</form>
+</br>
+<form th:action="add" data-th-name="banner" method="post" enctype="multipart/form-data">
+    添加图片：<input type="file" data-th-name="url"/></br>
+    描述：<input type="text" data-th-name="description"/></br>
+    链接：<input type="text" data-th-name="link"/></br>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

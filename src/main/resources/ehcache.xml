@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd" updateCheck="false">
+    <diskStore path="java.io.tmpdir"/>
+    <!--
+    <transactionManagerLookup class="net.sf.ehcache.transaction.manager.DefaultTransactionManagerLookup"
+                              properties="jndiName=java:/TransactionManager" propertySeparator=";"/>
+    -->
+    <defaultCache
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            maxEntriesLocalHeap="10000000"
+            maxEntriesLocalDisk="10000000"
+            maxElementsInMemory="10000000"
+            maxElementsOnDisk="10000000"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+    </defaultCache>
+
+</ehcache>
